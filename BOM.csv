@@ -13,4 +13,4 @@ R1,1,C4219180,CRCW06031M18FKEA,VISHAY,603,1.18MΩ 100mW Thick Film Resistor ±10
 R2,1,C2930117,FRC0603F5622TS,FOJAN,603,56.2kΩ ±1% 100mW 0603 Thick Film Resistor
 C5,1,C344195,TCC0603X7R224K500CT,CCTC,603,220nF ±10% 50V Ceramic Capacitor X7R 0603
 Q2/Q3,2,C52205260,TPSIR870ADP-T1-GE3,TECH PUBLIC,PDFN-8(5x6),"57W 100V 60A 1.2V 6.5mΩ@10V 1 N-channel N-Channel PDFN-8(5x6) Single FETs, MOSFETs "
-C1,1,C19270695,JBLH2470M100E125RLM 47UF 100V,DMBJ,"Through Hole,D10xL12.5mm","47uF ±20% 100V Through Hole,D10xL12.5mm 2000hrs@105℃"
+C1,1,TBD,"47uF >=25V radial, D8.0mm body / 3.5mm lead pitch",TBD,"Through Hole,D8.0xL11.5mm","47uF ±20% >=25V aluminium electrolytic. MUST fit footprint CP_Radial_D8.0mm_P3.80mm. Previous C19270695 (D10xL12.5mm, 5.0mm pitch) does NOT fit - reselect before ordering"

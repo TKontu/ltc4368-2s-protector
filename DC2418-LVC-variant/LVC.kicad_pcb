@@ -1615,7 +1615,7 @@
 				)
 			)
 		)
-		(property "Value" "CP_Radial_D8.0mm_P3.80mm"
+		(property "Value" "47 uF"
 			(at 1.9 5.25 90)
 			(layer "F.Fab")
 			(uuid "eb69b994-8313-415e-8bf0-7e4719fdc012")
@@ -4093,7 +4093,7 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "DNP"
 			(at -2.128 -4.826 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4431,7 +4431,7 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "47 uF"
+		(property "Value" "4.7 uF"
 			(at 2.19 0.635 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7017,7 +7017,7 @@
 				(justify left top mirror)
 			)
 		)
-		(property "Value" "2220"
+		(property "Value" "4.7 uF"
 			(at -2.128 6.604 90)
 			(unlocked yes)
 			(layer "B.Fab")

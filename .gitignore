@@ -1,0 +1,26 @@
+# KiCad — editor locks and per-user local state
+*.lck
+~*.lck
+*.kicad_prl
+
+# KiCad — auto-generated caches and backups
+*-backups/
+fp-info-cache
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_pro-bak
+_autosave-*
+*.000
+*.bak
+
+# KiCad — netlist / intermediate outputs
+*.net
+*.xml
+*.cmp
+*.drc
+*.erc
+
+# OS cruft
+Thumbs.db
+desktop.ini
+.DS_Store

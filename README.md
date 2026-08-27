@@ -9,6 +9,13 @@ Pack-total sensing on the two main leads only — cell balancing is handled by t
 balance lead. Adapted from the ADI **DC2418A** demo board, rescaled from 24 V / 10 A to a 2S
 (6.0–8.7 V) pack.
 
+| Front (F.Cu) | Back (B.Cu) |
+|---|---|
+| ![Front copper layer](front.png) | ![Back copper layer](back.png) |
+
+Board outline **123.0 × 87.5 mm**, 2 layers, XT30PW-M (VIN) and XT30PW-F (VOUT) horizontal
+connectors, 4× M2.5 and 4× M5.5 mounting holes.
+
 ## Features
 
 - Under-voltage cutoff (LVC), over-voltage backstop
@@ -43,9 +50,13 @@ For 3.0 V/cell set `V_UV = 6.0 V`; for a different breaker point `R4 = 0.050 / I
 
 ```
 DC2418-LVC/                 KiCad project + Gerbers (connectors as drawn)
-DC2418-LVC-variant/         Electrically identical; XT30 connectors to the side
   DC2418A-2.kicad_sch / .kicad_pcb / .kicad_pro
-  *.gbr / *.drl / *.gbrjob  Fabrication outputs (Gerber X2 + Excellon)
+  DC2418A-2-*.gbr / *.drl / *-job.gbrjob    Fabrication outputs (Gerber X2 + Excellon)
+DC2418-LVC-variant/         Electrically identical; XT30 connectors to the side
+  LVC.kicad_sch / .kicad_pcb / .kicad_pro
+  LVC-*.gbr / *.drl / *-job.gbrjob          Fabrication outputs
+BOM.csv                     LCSC-referenced bill of materials
+front.png / back.png        Layout views of DC2418-LVC
 ```
 
 ## Bill of materials
@@ -64,11 +75,20 @@ DC2418-LVC-variant/         Electrically identical; XT30 connectors to the side
 | C5 | 0.22 µF | 0603 | RETRY → auto-retry (GND = latch-off) |
 | C15 | 1 µF | 1206 | VIN bypass (place at the pin) |
 | C7 | 4.7 µF (optional) | 2220 | Input bulk cap |
-| C1 | 47 µF | TH | Output bulk cap |
+| C1 | 47 µF ≥25 V | THT radial, **D8.0 mm body / 3.5 mm pitch** | Output bulk cap — footprint is `CP_Radial_D8.0mm_P3.80mm` |
 | C2, C6 | 4.7 µF | 1210 | Output caps |
 
 Divider values are E96 1%. Cap voltage ratings are inherited 100 V parts; **25 V is sufficient**
 for a 2S pack.
+
+> **Not in the BOM:** the **XT30 connectors are not listed** — both boards place an
+> `AMASS_XT30PW-M` (VIN) and an `AMASS_XT30PW-F` (VOUT), source them separately. The
+> bidirectional **TVS** recommended under [Usage](#usage) is also not listed.
+>
+> **Do not populate:** **R5** (2512) — the DC2418A's version-option pair with R4. On the **-A**
+> build, R4 is the live sense position (1.2 mΩ); R5 is the **-B**'s 0.02 Ω slot. Verified: R4 and
+> R5 bridge the same two nodes (`VOUT` ↔ `Net-(U1-SENSE)`), i.e. **parallel alternates, not in
+> series** — so leaving R5 empty is harmless. Also `C9` and `C10`, both marked `OPT`.
 
 ## Build notes
 
@@ -97,4 +117,5 @@ your own application.
 Topology adapted from Analog Devices' **DC2418A** demo board for the LTC4368; independently
 re-drawn schematic and layout, not affiliated with or endorsed by ADI.
 
-License: **TBD** — add a `LICENSE` file (e.g. CERN-OHL-S-2.0 for hardware, CC-BY-4.0 for docs).
+Hardware (schematics, layout, Gerbers): **[CERN-OHL-S-2.0](LICENCE)** — strongly reciprocal.
+Documentation (this README, BOM, images): **[CC-BY-4.0](LICENSE-docs)**.
