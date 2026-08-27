@@ -13,7 +13,7 @@ balance lead. Adapted from the ADI **DC2418A** demo board, rescaled from 24 V / 
 |---|---|
 | ![Front copper layer](front.png) | ![Back copper layer](back.png) |
 
-Board outline **60.0 × 33 mm**, 2 layers, XT30PW-M (VIN) and XT30PW-F (VOUT) horizontal
+Board outline **60.0 × 33.5 mm**, 2 layers, XT30PW-M (VIN) and XT30PW-F (VOUT) horizontal
 connectors, 4× M2.5 and 4× M5.5 mounting holes.
 
 ## Features
