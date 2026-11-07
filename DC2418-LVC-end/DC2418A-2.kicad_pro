@@ -550,6 +550,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -742,7 +743,7 @@
         "uuid": "4c6a38da-294d-41a5-a0b9-d41236766402"
       }
     ],
-    "used_designators": "U1,#PWR1-3,MOSFET1-2,R1-8,C1-7",
+    "used_designators": "#PWR1-3,C1-7,MOSFET1-2,R1-8,U1",
     "variants": []
   },
   "sheets": [

@@ -52,14 +52,14 @@ For 3.0 V/cell set `V_UV = 6.0 V`; for a different breaker point `R4 = 0.050 / I
 ## Repository contents
 
 ```
-DC2418-LVC/                 KiCad project + Gerbers (connectors as drawn)
+DC2418-LVC-end/             KiCad project + Gerbers; XT30 connectors at the board ends
   DC2418A-2.kicad_sch / .kicad_pcb / .kicad_pro
   DC2418A-2-*.gbr / *.drl / *-job.gbrjob    Fabrication outputs (Gerber X2 + Excellon)
-DC2418-LVC-variant/         Electrically identical; XT30 connectors to the side
+DC2418-LVC-side/            Electrically identical; XT30 connectors to the side
   LVC.kicad_sch / .kicad_pcb / .kicad_pro
   LVC-*.gbr / *.drl / *-job.gbrjob          Fabrication outputs
 BOM.csv                     LCSC-referenced bill of materials
-front.png / back.png        Layout views of DC2418-LVC
+front.png / back.png        Layout views of DC2418-LVC-end
 ```
 
 ## Bill of materials
@@ -97,7 +97,9 @@ for a 2S pack.
 
 - **2-layer board.** Keep VIN → Q2 → Q3 → R4 → VOUT short and wide; **2 oz copper** on that path.
 - **Kelvin-sense R4:** route SENSE and VOUT to the resistor's own pads, not the current trace.
-- **Q2/Q3 PDFN** have a bottom thermal pad (exposed drain pad, now included in the footprints on both boards) — need hot-air/reflow with paste, not an iron. Swap to
+- **Q2/Q3 PDFN** have a bottom thermal pad. The footprints on both boards include it as pad 5 (drain:
+  VIN on Q2, SENSE on Q3) with a paste opening. Without it, solder wicks under the large exposed pad
+  and pulls the FET off its small pins. Needs hot-air/reflow with paste, not an iron. Swap to
   DPAK (IRLR7843) for iron/heat-gun assembly (footprint changes; keep sources common, drains out).
 - Before power-up, net-highlight two nets: the **FET common-source node** (both sources, not a
   drain) and the **UV/OV tap order** (UV taps *above* OV).

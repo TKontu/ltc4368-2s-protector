@@ -24,3 +24,6 @@ _autosave-*
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# KiCad local history (embedded git repo)
+.history/
