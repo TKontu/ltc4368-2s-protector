@@ -9,6 +9,9 @@ Pack-total sensing on the two main leads only — cell balancing is handled by t
 balance lead. Adapted from the ADI **DC2418A** demo board, rescaled from 24 V / 10 A to a 2S
 (6.0–8.7 V) pack.
 
+> **Status:** built and bench-tested (smoke-stopper current-limited first power-up) on the current
+> revision.
+
 | Front (F.Cu) | Back (B.Cu) |
 |---|---|
 | ![Front copper layer](front.png) | ![Back copper layer](back.png) |
@@ -94,7 +97,7 @@ for a 2S pack.
 
 - **2-layer board.** Keep VIN → Q2 → Q3 → R4 → VOUT short and wide; **2 oz copper** on that path.
 - **Kelvin-sense R4:** route SENSE and VOUT to the resistor's own pads, not the current trace.
-- **Q2/Q3 PDFN** have a bottom thermal pad — need hot-air/reflow with paste, not an iron. Swap to
+- **Q2/Q3 PDFN** have a bottom thermal pad (exposed drain pad, now included in the footprints on both boards) — need hot-air/reflow with paste, not an iron. Swap to
   DPAK (IRLR7843) for iron/heat-gun assembly (footprint changes; keep sources common, drains out).
 - Before power-up, net-highlight two nets: the **FET common-source node** (both sources, not a
   drain) and the **UV/OV tap order** (UV taps *above* OV).

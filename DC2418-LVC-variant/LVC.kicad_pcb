@@ -4678,12 +4678,6 @@
 		(path "/145af8e2-a36f-43c0-91ff-2d3d8d6ae224")
 		(sheetname "/")
 		(sheetfile "LVC.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "8" "7" "6" "5")
-			)
-		)
 		(attr dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4895,6 +4889,15 @@
 			(pintype "unspecified")
 			(thermal_bridge_angle 45)
 			(uuid "17eaa5c5-d6f7-4f69-816b-98d55e37947f")
+		)
+		(pad "PAD" smd rect
+			(at 0.097602 0.503998 180)
+			(size 3.007996 3.804796)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(pinfunction "8_8")
+			(pintype "unspecified")
+			(thermal_bridge_angle 45)
+			(uuid "2827c88d-52cc-42aa-8c46-1148e271047a")
 		)
 		(embedded_fonts no)
 	)
@@ -5386,12 +5389,6 @@
 		(path "/f6cb23a4-e525-4fdb-90a9-f45187ab9d65")
 		(sheetname "/")
 		(sheetfile "LVC.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "8" "7" "6" "5")
-			)
-		)
 		(attr dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5603,6 +5600,15 @@
 			(pintype "unspecified")
 			(thermal_bridge_angle 45)
 			(uuid "c9db1e54-c603-4426-87a1-4b8452d5cdc6")
+		)
+		(pad "PAD" smd rect
+			(at 0.097609 0.50399)
+			(size 3.00798 3.80478)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(pinfunction "8_8")
+			(pintype "unspecified")
+			(thermal_bridge_angle 45)
+			(uuid "ceea7f7d-de51-4efa-8048-c62ea3cce291")
 		)
 		(embedded_fonts no)
 	)
